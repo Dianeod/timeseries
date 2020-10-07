@@ -713,15 +713,14 @@ i.predDataCheck:{[mdl;exog]
 i.differ:{[endog;d;s]
   // Apply non seasonal differencing if appropriate (handling of AR/ARMA)
   if[s~()!();s[`D]:0b];
-  I:i.diff[endog;d];
+  initDiff:i.diff[endog;d];
   // Apply seasonal differencing if appropriate
-  if[s[`D];I:s[`D]i.seasonDiff[s`m]/I];
-  // Check stationality
-  if[not i.stationary[I];i.err.stat[]];
+  finalDiff:$[s[`D];s[`D]i.seasonDiff[s`m]/initDiff;initDiff];
+  // Check stationarity
+  if[not i.stationary[finalDiff];ts.i.err.stat[]];
   // Return integrated data
-  I
+  `final`init!(finalDiff;initDiff)
   }
-
 
 // Feature extraction utilities
 
