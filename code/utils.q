@@ -717,7 +717,7 @@ i.differ:{[endog;d;s]
   // Apply seasonal differencing if appropriate
   finalDiff:$[s[`D];s[`D]i.seasonDiff[s`m]/initDiff;initDiff];
   // Check stationarity
-  if[not i.stationary[finalDiff];ts.i.err.stat[]];
+  if[not i.stationary[finalDiff];i.err.stat[]];
   // Return integrated data
   `final`init!(finalDiff;initDiff)
   }
