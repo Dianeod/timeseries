@@ -637,7 +637,7 @@ i.reverseSeasonDiff:{[origd;dfdata]
 
 // @private
 // Functions used to flag errors
-i.err.stat:{'`$"Time series not stationary, try another value of d"}
+i.err.stat:{-1"\nTime series not stationary, trying another value of d is advised\n";}
 i.err.len:{'`$"Endog length less than length"}
 i.err.exog:{'`$"Test exog length does not match train exog length"}
 
