@@ -4,19 +4,13 @@ Time series is defined as a sequence of information collected sequentially in ti
 
 Throughout these notebooks various methods of time series forecasting are implemented on a range of datasets in order to compare implementation and results of models.
 
-Both EmbedPy and JupyterQ are utilised in the forecasting of and plotting of results.
 
 The following time series libraries are demonstrated in the notebooks:
 
-1. [FBProphet](https://facebook.github.io/prophet/docs/quick_start.html): This is a time series model developed by Facebook for forecasting time series using an additive regression model where non-linear trends are fitted with seasonality trends such as daily, monthly yearly etc, along with holoday effects using the statistical model STAN.
+1. [ARIMA](https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/): ARIMA is a auto regression model that uses past lagged values to forecast future values. Both a [statsmodel](https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima_model.ARIMA.html) and kdb implementation are available.
 
-2. [TBATS](https://github.com/intive-DataScience/tbats): This is a predictive model that uses exponential smoothing to forecast time serues with complex seasonal patterns.
+1. [SARIMA](https://machinelearningmastery.com/sarima-for-time-series-forecasting-in-python/#:~:text=An%20extension%20to%20ARIMA%20that,data%20containing%20trends%20and%20seasonality.): A SARIMA model is an extension of the ARIMA model with the addition of seasonal components.
 
-3. [ARIMA](https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/): ARIMA is a auto regression model that uses past lagged values to forecast future values. Both a [statsmodel](https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima_model.ARIMA.html) and kdb implementation are available.
-
-4. [GluonTS](https://github.com/awslabs/gluon-ts): GluonTS utilises deep learning based methods in MXNet for probabilistic time series forecasting.
-
-5. [LSTM](https://keras.io/layers/recurrent/): LSTM is an architrcture that utilises Recurrent Neural Networks (RNN) in order to learn contextual (lagged) information from sequential data.
 
 In each notebook, two datasets are tested:
 
@@ -51,6 +45,3 @@ or with conda
 conda install --file requirements.txt
 ```
 **N.B.** Additionally [graphviz](http://www.graphviz.org/download/) must be installed on the system running the notebooks.
-
-
-
