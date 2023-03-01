@@ -3,6 +3,6 @@ numpy
 fbprophet
 tbats
 statsmodel
-mxnet==1.6
+mxnet==1.9.1
 gluonts
 pandas
